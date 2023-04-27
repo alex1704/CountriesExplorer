@@ -21,7 +21,19 @@
 		FA17B81729FA9071000543BF /* CountryCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B81629FA9071000543BF /* CountryCellConfiguration.swift */; };
 		FA17B81929FA90CF000543BF /* CountryBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B81829FA90CF000543BF /* CountryBasicInfo.swift */; };
 		FA17B81B29FA91E1000543BF /* CountriesViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B81A29FA91E1000543BF /* CountriesViewController+DataSource.swift */; };
+		FA17B82329FABB83000543BF /* FoapTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B82229FABB83000543BF /* FoapTestTests.swift */; };
+		FA17B82B29FABC49000543BF /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B82A29FABC49000543BF /* PreviewUtils.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA17B82429FABB83000543BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA17B7E329FA3C23000543BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA17B7EA29FA3C23000543BF;
+			remoteInfo = FoapTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FA17B7EB29FA3C23000543BF /* FoapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +52,20 @@
 		FA17B81629FA9071000543BF /* CountryCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCellConfiguration.swift; sourceTree = "<group>"; };
 		FA17B81829FA90CF000543BF /* CountryBasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryBasicInfo.swift; sourceTree = "<group>"; };
 		FA17B81A29FA91E1000543BF /* CountriesViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountriesViewController+DataSource.swift"; sourceTree = "<group>"; };
+		FA17B82029FABB83000543BF /* FoapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA17B82229FABB83000543BF /* FoapTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoapTestTests.swift; sourceTree = "<group>"; };
+		FA17B82A29FABC49000543BF /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FA17B7E829FA3C23000543BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA17B81D29FABB83000543BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FA17B7ED29FA3C23000543BF /* FoapTest */,
+				FA17B82129FABB83000543BF /* FoapTestTests */,
 				FA17B7EC29FA3C23000543BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				FA17B7EB29FA3C23000543BF /* FoapTest.app */,
+				FA17B82029FABB83000543BF /* FoapTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,8 +151,17 @@
 			isa = PBXGroup;
 			children = (
 				FA17B81029FA7EBD000543BF /* countries.json */,
+				FA17B82A29FABC49000543BF /* PreviewUtils.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA17B82129FABB83000543BF /* FoapTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA17B82229FABB83000543BF /* FoapTestTests.swift */,
+			);
+			path = FoapTestTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +184,24 @@
 			productReference = FA17B7EB29FA3C23000543BF /* FoapTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA17B81F29FABB83000543BF /* FoapTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA17B82829FABB84000543BF /* Build configuration list for PBXNativeTarget "FoapTestTests" */;
+			buildPhases = (
+				FA17B81C29FABB83000543BF /* Sources */,
+				FA17B81D29FABB83000543BF /* Frameworks */,
+				FA17B81E29FABB83000543BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA17B82529FABB83000543BF /* PBXTargetDependency */,
+			);
+			name = FoapTestTests;
+			productName = FoapTestTests;
+			productReference = FA17B82029FABB83000543BF /* FoapTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +214,10 @@
 				TargetAttributes = {
 					FA17B7EA29FA3C23000543BF = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					FA17B81F29FABB83000543BF = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = FA17B7EA29FA3C23000543BF;
 					};
 				};
 			};
@@ -180,6 +235,7 @@
 			projectRoot = "";
 			targets = (
 				FA17B7EA29FA3C23000543BF /* FoapTest */,
+				FA17B81F29FABB83000543BF /* FoapTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +249,13 @@
 				FA17B7F829FA3C25000543BF /* Assets.xcassets in Resources */,
 				FA17B81129FA7EBD000543BF /* countries.json in Resources */,
 				FA17B7F629FA3C23000543BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA17B81E29FABB83000543BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,13 +273,30 @@
 				FA17B80329FA3DF2000543BF /* CountriesViewController.swift in Sources */,
 				FA17B80629FA4094000543BF /* CountryCellContent.swift in Sources */,
 				FA17B81929FA90CF000543BF /* CountryBasicInfo.swift in Sources */,
+				FA17B82B29FABC49000543BF /* PreviewUtils.swift in Sources */,
 				FA17B80D29FA6785000543BF /* CountryListProvider.swift in Sources */,
 				FA17B81B29FA91E1000543BF /* CountriesViewController+DataSource.swift in Sources */,
 				FA17B81329FA7EEB000543BF /* CountryListProviderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA17B81C29FABB83000543BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA17B82329FABB83000543BF /* FoapTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA17B82529FABB83000543BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA17B7EA29FA3C23000543BF /* FoapTest */;
+			targetProxy = FA17B82429FABB83000543BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA17B7F429FA3C23000543BF /* Main.storyboard */ = {
@@ -410,6 +490,44 @@
 			};
 			name = Release;
 		};
+		FA17B82629FABB84000543BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QU35J8G95;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dopaminecode.FoapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoapTest";
+			};
+			name = Debug;
+		};
+		FA17B82729FABB84000543BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QU35J8G95;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dopaminecode.FoapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FoapTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -427,6 +545,15 @@
 			buildConfigurations = (
 				FA17B80029FA3C25000543BF /* Debug */,
 				FA17B80129FA3C25000543BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA17B82829FABB84000543BF /* Build configuration list for PBXNativeTarget "FoapTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA17B82629FABB84000543BF /* Debug */,
+				FA17B82729FABB84000543BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
