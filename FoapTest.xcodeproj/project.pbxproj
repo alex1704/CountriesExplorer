@@ -23,6 +23,9 @@
 		FA17B81B29FA91E1000543BF /* CountriesViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B81A29FA91E1000543BF /* CountriesViewController+DataSource.swift */; };
 		FA17B82329FABB83000543BF /* FoapTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B82229FABB83000543BF /* FoapTestTests.swift */; };
 		FA17B82B29FABC49000543BF /* PreviewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17B82A29FABC49000543BF /* PreviewUtils.swift */; };
+		FA56804A29FAF3CC00416F0F /* CountriesAPI in Resources */ = {isa = PBXBuildFile; fileRef = FA56804929FAF3CC00416F0F /* CountriesAPI */; };
+		FA56804D29FAF3F700416F0F /* CountriesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804C29FAF3F700416F0F /* CountriesAPI */; };
+		FA56805029FAF47200416F0F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804F29FAF47200416F0F /* Apollo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		FA17B82029FABB83000543BF /* FoapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17B82229FABB83000543BF /* FoapTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoapTestTests.swift; sourceTree = "<group>"; };
 		FA17B82A29FABC49000543BF /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
+		FA56804929FAF3CC00416F0F /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA56804D29FAF3F700416F0F /* CountriesAPI in Frameworks */,
+				FA56805029FAF47200416F0F /* Apollo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +84,11 @@
 		FA17B7E229FA3C23000543BF = {
 			isa = PBXGroup;
 			children = (
+				FA56804829FAF3CC00416F0F /* libs */,
 				FA17B7ED29FA3C23000543BF /* FoapTest */,
 				FA17B82129FABB83000543BF /* FoapTestTests */,
 				FA17B7EC29FA3C23000543BF /* Products */,
+				FA56804B29FAF3F700416F0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +172,21 @@
 			path = FoapTestTests;
 			sourceTree = "<group>";
 		};
+		FA56804829FAF3CC00416F0F /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				FA56804929FAF3CC00416F0F /* CountriesAPI */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		FA56804B29FAF3F700416F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +203,10 @@
 			dependencies = (
 			);
 			name = FoapTest;
+			packageProductDependencies = (
+				FA56804C29FAF3F700416F0F /* CountriesAPI */,
+				FA56804F29FAF47200416F0F /* Apollo */,
+			);
 			productName = FoapTest;
 			productReference = FA17B7EB29FA3C23000543BF /* FoapTest.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +257,9 @@
 				Base,
 			);
 			mainGroup = FA17B7E229FA3C23000543BF;
+			packageReferences = (
+				FA56804E29FAF47200416F0F /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = FA17B7EC29FA3C23000543BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +277,7 @@
 			files = (
 				FA17B7FB29FA3C25000543BF /* LaunchScreen.storyboard in Resources */,
 				FA17B7F829FA3C25000543BF /* Assets.xcassets in Resources */,
+				FA56804A29FAF3CC00416F0F /* CountriesAPI in Resources */,
 				FA17B81129FA7EBD000543BF /* countries.json in Resources */,
 				FA17B7F629FA3C23000543BF /* Main.storyboard in Resources */,
 			);
@@ -559,6 +590,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA56804E29FAF47200416F0F /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA56804C29FAF3F700416F0F /* CountriesAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CountriesAPI;
+		};
+		FA56804F29FAF47200416F0F /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA56804E29FAF47200416F0F /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA17B7E329FA3C23000543BF /* Project object */;
 }
