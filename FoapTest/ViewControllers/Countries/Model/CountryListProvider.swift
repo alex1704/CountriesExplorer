@@ -10,20 +10,33 @@ import Apollo
 import CountriesAPI
 import Combine
 
-protocol CountriesProvidable {
+enum CountriesProviderState: Equatable {
+  case idle
+  case fetching
+  case error(String)
+}
+
+protocol CountriesProvidable: AnyObject {
+  var state: CountriesProviderState { get }
+  var statePublisher: Published<CountriesProviderState>.Publisher { get }
   var countries: [CountryBasicInfo] { get }
   var countriesPublisher: Published<[CountryBasicInfo]>.Publisher { get }
   func fetchCountries()
 }
 
-final class CountryListProvider: CountriesProvidable {
+final class CountryListProvider: CountriesProvidable, ObservableObject {
 
   // MARK: - Public
 
-  @Published private(set) var state = State.idle
+  @Published private(set) var state = CountriesProviderState.idle
   @Published private(set) var countries: [CountryBasicInfo] = []
+
   var countriesPublisher: Published<[CountryBasicInfo]>.Publisher {
     _countries.projectedValue
+  }
+
+  var statePublisher: Published<CountriesProviderState>.Publisher {
+    _state.projectedValue
   }
 
   func fetchCountries() {
@@ -53,14 +66,6 @@ final class CountryListProvider: CountriesProvidable {
   // MARK: - Private
 
   private var apolloClient = ApolloClient(url: URL(string: "https://countries.trevorblades.com/graphql")!)
-}
-
-extension CountryListProvider {
-  enum State: Equatable {
-    case idle
-    case fetching
-    case error(String)
-  }
 }
 
 extension GetCountriesListQuery.Data.Country {

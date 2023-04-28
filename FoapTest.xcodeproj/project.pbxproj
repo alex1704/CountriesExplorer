@@ -26,6 +26,7 @@
 		FA2231AA29FB821A00CB44FB /* CountriesAPI in Frameworks */ = {isa = PBXBuildFile; productRef = FA2231A929FB821A00CB44FB /* CountriesAPI */; };
 		FA2231AC29FB82B200CB44FB /* CountriesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231AB29FB82B200CB44FB /* CountriesAPITests.swift */; };
 		FA2231B029FB88B500CB44FB /* CountriesAPITestMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FA2231AF29FB88B500CB44FB /* CountriesAPITestMocks */; };
+		FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */; };
 		FA56805029FAF47200416F0F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804F29FAF47200416F0F /* Apollo */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		FA17B82229FABB83000543BF /* FoapTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoapTestTests.swift; sourceTree = "<group>"; };
 		FA17B82A29FABC49000543BF /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
 		FA2231AB29FB82B200CB44FB /* CountriesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPITests.swift; sourceTree = "<group>"; };
+		FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRefreshController.swift; sourceTree = "<group>"; };
 		FA2AC82229FB81EB0040658E /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 			children = (
 				FA17B80229FA3DF2000543BF /* CountriesViewController.swift */,
 				FA17B80529FA4094000543BF /* CountryCellContent.swift */,
+				FA2231B329FBECE500CB44FB /* Service */,
 				FA17B80E29FA678A000543BF /* Model */,
 			);
 			path = Countries;
@@ -174,6 +177,14 @@
 				FA2231AB29FB82B200CB44FB /* CountriesAPITests.swift */,
 			);
 			path = FoapTestTests;
+			sourceTree = "<group>";
+		};
+		FA2231B329FBECE500CB44FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		FA56804829FAF3CC00416F0F /* libs */ = {
@@ -307,6 +318,7 @@
 				FA17B7EF29FA3C23000543BF /* AppDelegate.swift in Sources */,
 				FA17B80A29FA5BC4000543BF /* String+Utils.swift in Sources */,
 				FA17B7F129FA3C23000543BF /* SceneDelegate.swift in Sources */,
+				FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */,
 				FA17B80329FA3DF2000543BF /* CountriesViewController.swift in Sources */,
 				FA17B80629FA4094000543BF /* CountryCellContent.swift in Sources */,
 				FA17B81929FA90CF000543BF /* CountryBasicInfo.swift in Sources */,

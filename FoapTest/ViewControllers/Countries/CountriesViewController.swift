@@ -16,6 +16,7 @@ final class CountriesViewController: UITableViewController {
     navigationController?.navigationBar.prefersLargeTitles = true
     navigationItem.title = NSLocalizedString("Countries", comment: "Countries list title")
     dataSource = .init(tableView: tableView, countriesProvider: countriesProvider)
+    countriesRefreshController = .init(tableViewController: self, countriesProvider: countriesProvider)
     tableView.rowHeight = 56
   }
 
@@ -25,6 +26,7 @@ final class CountriesViewController: UITableViewController {
   }
 
   private var dataSource: DataSource!
+  private var countriesRefreshController: CountriesRefreshController?
 }
 
 struct CountriesViewController_Preview: PreviewProvider {
@@ -44,11 +46,13 @@ struct CountriesViewController_Preview: PreviewProvider {
   struct Preview: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> some UIViewController {
       let controller = CountriesViewController()
-      controller.countriesProvider = CountryListProviderMock()
+      controller.countriesProvider = countriesProvider
       return controller
     }
 
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
     }
+
+    @StateObject var countriesProvider = CountryListProviderMock()
   }
 }
