@@ -19,6 +19,11 @@ final class CountriesViewController: UITableViewController {
     tableView.rowHeight = 56
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    countriesProvider.fetchCountries()
+  }
+
   private var dataSource: DataSource!
 }
 

@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import Combine
 
-struct CountryListProviderMock: CountriesProvidable {
-  private(set) var countries: [CountryBasicInfo] = []
+final class CountryListProviderMock: CountriesProvidable {
+  @Published private(set) var countries: [CountryBasicInfo] = []
+  var countriesPublisher: Published<[CountryBasicInfo]>.Publisher {
+    _countries.projectedValue
+  }
+
+  func fetchCountries() {}
 
   init() {
     countries = PreviewUtils.getAllCountriesBasicInfo()
