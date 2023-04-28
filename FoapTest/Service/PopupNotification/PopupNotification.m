@@ -31,6 +31,7 @@
   ]];
 
   UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+  label.numberOfLines = 0;
   label.text = text;
   label.textColor = UIColor.whiteColor;
   label.textAlignment = NSTextAlignmentCenter;

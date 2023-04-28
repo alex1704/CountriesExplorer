@@ -28,6 +28,10 @@ extension CountriesViewController {
       }
     }
 
+    func itemIdentifier(for indexPath: IndexPath) -> CountryBasicInfo? {
+      diffableDataSource.itemIdentifier(for: indexPath)
+    }
+
     // MARK: - Private
 
     private let diffableDataSource: UITableViewDiffableDataSource<Int, CountryBasicInfo>

@@ -49,6 +49,7 @@ extension CountryDetailsView {
 
   private func newCell(withTitle title: String, definition: String) -> UILabel {
     let label = UILabel(frame: .zero)
+    label.numberOfLines = 0
     label.text = "\(title): \(definition)"
     return label
   }

@@ -14,6 +14,7 @@ final class CountryDetailsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    navigationController?.navigationBar.prefersLargeTitles = false
     navigationItem.title = basicInfo?.name ?? "Unknown"
     setupViews()
     fetchDetails()
@@ -57,6 +58,7 @@ extension CountryDetailsViewController {
   }
 
   private func setupViews() {
+    view.backgroundColor = .white
     view.addSubview(infoView)
     view.addSubview(retryButton)
     infoView.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +71,7 @@ extension CountryDetailsViewController {
     retryButton.addTarget(self, action: #selector(didTouchRetry), for: .touchUpInside)
 
     NSLayoutConstraint.activate([
-      infoView.topAnchor.constraint(equalTo: view.topAnchor, constant: 16),
+      infoView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
       infoView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
       infoView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
     ])

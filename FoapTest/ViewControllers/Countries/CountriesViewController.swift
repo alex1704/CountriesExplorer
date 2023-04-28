@@ -37,6 +37,20 @@ final class CountriesViewController: UITableViewController {
   private var errorCancellable: AnyCancellable?
 }
 
+// MARK: - UITableViewDelegate
+extension CountriesViewController {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let info = dataSource.itemIdentifier(for: indexPath) else {
+      assertionFailure()
+      return
+    }
+
+    let destinationVC = CountryDetailsViewController()
+    destinationVC.basicInfo = info
+    self.navigationController?.pushViewController(destinationVC, animated: true)
+  }
+}
+
 struct CountriesViewController_Preview: PreviewProvider {
   static var previews: some View {
     ZStack {
