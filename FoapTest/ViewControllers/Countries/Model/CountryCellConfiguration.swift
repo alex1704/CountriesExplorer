@@ -13,7 +13,7 @@ struct CountryCellConfiguration: UIContentConfiguration {
   let code: String
 
   func makeContentView() -> UIView & UIContentView {
-    CountryCellContent(configuration: self)
+    CountryCellContentView(configuration: self)
   }
 
   func updated(for state: UIConfigurationState) -> Self {

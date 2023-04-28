@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 
 /// Country cell view
-final class CountryCellContent: UIStackView, UIContentView {
+final class CountryCellContentView: UIStackView, UIContentView {
   var configuration: UIContentConfiguration {
     didSet {
       populateViews()
