@@ -27,6 +27,8 @@
 		FA2231AC29FB82B200CB44FB /* CountriesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231AB29FB82B200CB44FB /* CountriesAPITests.swift */; };
 		FA2231B029FB88B500CB44FB /* CountriesAPITestMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FA2231AF29FB88B500CB44FB /* CountriesAPITestMocks */; };
 		FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */; };
+		FA2231B629FBF05500CB44FB /* PopupNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2231B529FBF05500CB44FB /* PopupNotification.m */; };
+		FA2231BE29FC0C2100CB44FB /* UIApplication+KeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */; };
 		FA56805029FAF47200416F0F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804F29FAF47200416F0F /* Apollo */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,11 @@
 		FA17B82A29FABC49000543BF /* PreviewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUtils.swift; sourceTree = "<group>"; };
 		FA2231AB29FB82B200CB44FB /* CountriesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesAPITests.swift; sourceTree = "<group>"; };
 		FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRefreshController.swift; sourceTree = "<group>"; };
+		FA2231B429FBF05500CB44FB /* FoapTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoapTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA2231B529FBF05500CB44FB /* PopupNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopupNotification.m; sourceTree = "<group>"; };
+		FA2231B729FBF56700CB44FB /* PopupNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupNotification.h; sourceTree = "<group>"; };
+		FA2231BC29FC0C2100CB44FB /* UIApplication+KeyWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+KeyWindow.h"; sourceTree = "<group>"; };
+		FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+KeyWindow.m"; sourceTree = "<group>"; };
 		FA2AC82229FB81EB0040658E /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +118,7 @@
 			children = (
 				FA17B7EE29FA3C23000543BF /* AppDelegate.swift */,
 				FA17B7F029FA3C23000543BF /* SceneDelegate.swift */,
+				FA2231B829FBF64100CB44FB /* PopupNotification */,
 				FA17B80829FA5B99000543BF /* Extensions */,
 				FA17B80429FA3E1B000543BF /* ViewControllers */,
 				FA17B80F29FA7E90000543BF /* Preview Content */,
@@ -118,6 +126,7 @@
 				FA17B7F729FA3C25000543BF /* Assets.xcassets */,
 				FA17B7F929FA3C25000543BF /* LaunchScreen.storyboard */,
 				FA17B7FC29FA3C25000543BF /* Info.plist */,
+				FA2231B429FBF05500CB44FB /* FoapTest-Bridging-Header.h */,
 			);
 			path = FoapTest;
 			sourceTree = "<group>";
@@ -185,6 +194,17 @@
 				FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FA2231B829FBF64100CB44FB /* PopupNotification */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231B729FBF56700CB44FB /* PopupNotification.h */,
+				FA2231B529FBF05500CB44FB /* PopupNotification.m */,
+				FA2231BC29FC0C2100CB44FB /* UIApplication+KeyWindow.h */,
+				FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */,
+			);
+			path = PopupNotification;
 			sourceTree = "<group>";
 		};
 		FA56804829FAF3CC00416F0F /* libs */ = {
@@ -259,6 +279,7 @@
 				TargetAttributes = {
 					FA17B7EA29FA3C23000543BF = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					FA17B81F29FABB83000543BF = {
 						CreatedOnToolsVersion = 14.3;
@@ -318,6 +339,7 @@
 				FA17B7EF29FA3C23000543BF /* AppDelegate.swift in Sources */,
 				FA17B80A29FA5BC4000543BF /* String+Utils.swift in Sources */,
 				FA17B7F129FA3C23000543BF /* SceneDelegate.swift in Sources */,
+				FA2231BE29FC0C2100CB44FB /* UIApplication+KeyWindow.m in Sources */,
 				FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */,
 				FA17B80329FA3DF2000543BF /* CountriesViewController.swift in Sources */,
 				FA17B80629FA4094000543BF /* CountryCellContent.swift in Sources */,
@@ -326,6 +348,7 @@
 				FA17B80D29FA6785000543BF /* CountryListProvider.swift in Sources */,
 				FA17B81B29FA91E1000543BF /* CountriesViewController+DataSource.swift in Sources */,
 				FA17B81329FA7EEB000543BF /* CountryListProviderMock.swift in Sources */,
+				FA2231B629FBF05500CB44FB /* PopupNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoapTest/Preview Content\"";
@@ -506,6 +530,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dopaminecode.FoapTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoapTest/FoapTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -516,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoapTest/Preview Content\"";
@@ -535,6 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dopaminecode.FoapTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoapTest/FoapTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

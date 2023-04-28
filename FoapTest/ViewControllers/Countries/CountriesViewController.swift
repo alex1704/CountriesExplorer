@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 final class CountriesViewController: UITableViewController {
   var countriesProvider: CountriesProvidable = CountryListProvider()
@@ -18,6 +19,12 @@ final class CountriesViewController: UITableViewController {
     dataSource = .init(tableView: tableView, countriesProvider: countriesProvider)
     countriesRefreshController = .init(tableViewController: self, countriesProvider: countriesProvider)
     tableView.rowHeight = 56
+
+    errorCancellable = countriesProvider.statePublisher.sink { newValue in
+      if case let .error(description) = newValue {
+        PopupNotification.show(withText: description, isError: true)
+      }
+    }
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -27,6 +34,7 @@ final class CountriesViewController: UITableViewController {
 
   private var dataSource: DataSource!
   private var countriesRefreshController: CountriesRefreshController?
+  private var errorCancellable: AnyCancellable?
 }
 
 struct CountriesViewController_Preview: PreviewProvider {
@@ -47,6 +55,9 @@ struct CountriesViewController_Preview: PreviewProvider {
     func makeUIViewController(context: Context) -> some UIViewController {
       let controller = CountriesViewController()
       controller.countriesProvider = countriesProvider
+      DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        countriesProvider.fetchCountries()
+      }
       return controller
     }
 
