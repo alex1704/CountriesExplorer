@@ -36,6 +36,7 @@
 		FA2231CE29FC421300CB44FB /* CountryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231CD29FC421300CB44FB /* CountryDetailsView.swift */; };
 		FA2231D429FC63D700CB44FB /* CountriesAPITestMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FA2231D329FC63D700CB44FB /* CountriesAPITestMocks */; };
 		FA2231D629FC6AC900CB44FB /* CountryDetailsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231D529FC6AC900CB44FB /* CountryDetailsProviderMock.swift */; };
+		FA2231D829FC7DD100CB44FB /* ActivityIndicatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231D729FC7DD100CB44FB /* ActivityIndicatorController.swift */; };
 		FA56805029FAF47200416F0F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804F29FAF47200416F0F /* Apollo */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		FA2231C929FC1A2900CB44FB /* BackendClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendClient.swift; sourceTree = "<group>"; };
 		FA2231CD29FC421300CB44FB /* CountryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsView.swift; sourceTree = "<group>"; };
 		FA2231D529FC6AC900CB44FB /* CountryDetailsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsProviderMock.swift; sourceTree = "<group>"; };
+		FA2231D729FC7DD100CB44FB /* ActivityIndicatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorController.swift; sourceTree = "<group>"; };
 		FA2AC82229FB81EB0040658E /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,6 +257,7 @@
 			children = (
 				FA2231B829FBF64100CB44FB /* PopupNotification */,
 				FA2231C929FC1A2900CB44FB /* BackendClient.swift */,
+				FA2231D729FC7DD100CB44FB /* ActivityIndicatorController.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				FA2231D629FC6AC900CB44FB /* CountryDetailsProviderMock.swift in Sources */,
 				FA2231BE29FC0C2100CB44FB /* UIApplication+KeyWindow.m in Sources */,
 				FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */,
+				FA2231D829FC7DD100CB44FB /* ActivityIndicatorController.swift in Sources */,
 				FA2231C729FC161E00CB44FB /* CountryDetailsProvider.swift in Sources */,
 				FA17B80329FA3DF2000543BF /* CountriesViewController.swift in Sources */,
 				FA2231C129FC13E400CB44FB /* CountryDetailsViewController.swift in Sources */,

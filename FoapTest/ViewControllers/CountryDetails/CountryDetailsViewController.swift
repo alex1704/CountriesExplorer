@@ -17,6 +17,10 @@ final class CountryDetailsViewController: UIViewController {
     navigationController?.navigationBar.prefersLargeTitles = false
     navigationItem.title = basicInfo?.name ?? "Unknown"
     setupViews()
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     fetchDetails()
   }
 
@@ -31,12 +35,17 @@ extension CountryDetailsViewController {
       return
     }
 
+    let loadingindicator = ActivityIndicatorController(hostView: view)
+    loadingindicator.startAnimating()
+
     Task {
       do {
         let info = try await detailsProvider.fetchDetails(forCode: countryId)
         updateView(with: info)
+        loadingindicator.stopAnimating()
       } catch {
         PopupNotification.show(withText: error.localizedDescription, isError: true)
+        loadingindicator.stopAnimating()
         showRetryButton()
       }
     }
@@ -58,7 +67,7 @@ extension CountryDetailsViewController {
   }
 
   private func setupViews() {
-    view.backgroundColor = .white
+    view.backgroundColor = .systemBackground
     view.addSubview(infoView)
     view.addSubview(retryButton)
     infoView.translatesAutoresizingMaskIntoConstraints = false

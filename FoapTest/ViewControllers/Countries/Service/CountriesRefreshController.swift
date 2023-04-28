@@ -25,6 +25,14 @@ final class CountriesRefreshController {
     }
   }
 
+  func beginRefreshing() {
+    refreshControl?.beginRefreshing()
+  }
+
+  func endRefreshing() {
+    refreshControl?.endRefreshing()
+  }
+
   @objc private func refreshData() {
     countriesProvider?.fetchCountries()
   }

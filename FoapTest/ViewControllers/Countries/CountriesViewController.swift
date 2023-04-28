@@ -29,6 +29,7 @@ final class CountriesViewController: UITableViewController {
 
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    countriesRefreshController?.beginRefreshing()
     countriesProvider.fetchCountries()
   }
 
@@ -47,7 +48,7 @@ extension CountriesViewController {
 
     let destinationVC = CountryDetailsViewController()
     destinationVC.basicInfo = info
-    self.navigationController?.pushViewController(destinationVC, animated: true)
+    navigationController?.pushViewController(destinationVC, animated: true)
   }
 }
 
