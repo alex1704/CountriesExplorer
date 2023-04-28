@@ -153,8 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				FA17B81A29FA91E1000543BF /* CountriesViewController+DataSource.swift */,
-				FA17B80C29FA6785000543BF /* CountryListProvider.swift */,
-				FA17B81229FA7EEB000543BF /* CountryListProviderMock.swift */,
 				FA17B81829FA90CF000543BF /* CountryBasicInfo.swift */,
 				FA17B81629FA9071000543BF /* CountryCellConfiguration.swift */,
 			);
@@ -182,6 +180,8 @@
 		FA2231B329FBECE500CB44FB /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				FA17B80C29FA6785000543BF /* CountryListProvider.swift */,
+				FA17B81229FA7EEB000543BF /* CountryListProviderMock.swift */,
 				FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */,
 			);
 			path = Service;
