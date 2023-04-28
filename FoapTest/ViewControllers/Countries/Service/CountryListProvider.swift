@@ -65,7 +65,7 @@ final class CountryListProvider: CountriesProvidable, ObservableObject {
 
   // MARK: - Private
 
-  private var apolloClient = ApolloClient(url: URL(string: "https://countries.trevorblades.com/graphql")!)
+  private var apolloClient = BackendClient.new()
 }
 
 extension GetCountriesListQuery.Data.Country {

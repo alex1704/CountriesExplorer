@@ -29,6 +29,13 @@
 		FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231B129FBECE000CB44FB /* CountriesRefreshController.swift */; };
 		FA2231B629FBF05500CB44FB /* PopupNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2231B529FBF05500CB44FB /* PopupNotification.m */; };
 		FA2231BE29FC0C2100CB44FB /* UIApplication+KeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */; };
+		FA2231C129FC13E400CB44FB /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231C029FC13E400CB44FB /* CountryDetailsViewController.swift */; };
+		FA2231C429FC144F00CB44FB /* CountryDetailsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231C329FC144F00CB44FB /* CountryDetailsConfig.swift */; };
+		FA2231C729FC161E00CB44FB /* CountryDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231C629FC161E00CB44FB /* CountryDetailsProvider.swift */; };
+		FA2231CA29FC1A2900CB44FB /* BackendClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231C929FC1A2900CB44FB /* BackendClient.swift */; };
+		FA2231CE29FC421300CB44FB /* CountryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231CD29FC421300CB44FB /* CountryDetailsView.swift */; };
+		FA2231D429FC63D700CB44FB /* CountriesAPITestMocks in Frameworks */ = {isa = PBXBuildFile; productRef = FA2231D329FC63D700CB44FB /* CountriesAPITestMocks */; };
+		FA2231D629FC6AC900CB44FB /* CountryDetailsProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2231D529FC6AC900CB44FB /* CountryDetailsProviderMock.swift */; };
 		FA56805029FAF47200416F0F /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = FA56804F29FAF47200416F0F /* Apollo */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +76,12 @@
 		FA2231B729FBF56700CB44FB /* PopupNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopupNotification.h; sourceTree = "<group>"; };
 		FA2231BC29FC0C2100CB44FB /* UIApplication+KeyWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+KeyWindow.h"; sourceTree = "<group>"; };
 		FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+KeyWindow.m"; sourceTree = "<group>"; };
+		FA2231C029FC13E400CB44FB /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewController.swift; sourceTree = "<group>"; };
+		FA2231C329FC144F00CB44FB /* CountryDetailsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsConfig.swift; sourceTree = "<group>"; };
+		FA2231C629FC161E00CB44FB /* CountryDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsProvider.swift; sourceTree = "<group>"; };
+		FA2231C929FC1A2900CB44FB /* BackendClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendClient.swift; sourceTree = "<group>"; };
+		FA2231CD29FC421300CB44FB /* CountryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsView.swift; sourceTree = "<group>"; };
+		FA2231D529FC6AC900CB44FB /* CountryDetailsProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsProviderMock.swift; sourceTree = "<group>"; };
 		FA2AC82229FB81EB0040658E /* CountriesAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CountriesAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2231D429FC63D700CB44FB /* CountriesAPITestMocks in Frameworks */,
 				FA2231AA29FB821A00CB44FB /* CountriesAPI in Frameworks */,
 				FA56805029FAF47200416F0F /* Apollo in Frameworks */,
 			);
@@ -118,7 +132,7 @@
 			children = (
 				FA17B7EE29FA3C23000543BF /* AppDelegate.swift */,
 				FA17B7F029FA3C23000543BF /* SceneDelegate.swift */,
-				FA2231B829FBF64100CB44FB /* PopupNotification */,
+				FA2231C829FC19D600CB44FB /* Service */,
 				FA17B80829FA5B99000543BF /* Extensions */,
 				FA17B80429FA3E1B000543BF /* ViewControllers */,
 				FA17B80F29FA7E90000543BF /* Preview Content */,
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				FA17B80B29FA63CE000543BF /* Countries */,
+				FA2231BF29FC133400CB44FB /* CountryDetails */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -151,9 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				FA17B80229FA3DF2000543BF /* CountriesViewController.swift */,
-				FA17B80529FA4094000543BF /* CountryCellContent.swift */,
-				FA2231B329FBECE500CB44FB /* Service */,
 				FA17B80E29FA678A000543BF /* Model */,
+				FA2231B329FBECE500CB44FB /* Service */,
+				FA2231CC29FC415F00CB44FB /* View */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 			children = (
 				FA17B81029FA7EBD000543BF /* countries.json */,
 				FA17B82A29FABC49000543BF /* PreviewUtils.swift */,
+				FA2231D529FC6AC900CB44FB /* CountryDetailsProviderMock.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -205,6 +221,58 @@
 				FA2231BD29FC0C2100CB44FB /* UIApplication+KeyWindow.m */,
 			);
 			path = PopupNotification;
+			sourceTree = "<group>";
+		};
+		FA2231BF29FC133400CB44FB /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231C029FC13E400CB44FB /* CountryDetailsViewController.swift */,
+				FA2231CB29FC415000CB44FB /* View */,
+				FA2231C529FC15F100CB44FB /* Service */,
+				FA2231C229FC140D00CB44FB /* Model */,
+			);
+			path = CountryDetails;
+			sourceTree = "<group>";
+		};
+		FA2231C229FC140D00CB44FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231C329FC144F00CB44FB /* CountryDetailsConfig.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA2231C529FC15F100CB44FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231C629FC161E00CB44FB /* CountryDetailsProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA2231C829FC19D600CB44FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231B829FBF64100CB44FB /* PopupNotification */,
+				FA2231C929FC1A2900CB44FB /* BackendClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA2231CB29FC415000CB44FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA2231CD29FC421300CB44FB /* CountryDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA2231CC29FC415F00CB44FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA17B80529FA4094000543BF /* CountryCellContent.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA56804829FAF3CC00416F0F /* libs */ = {
@@ -241,6 +309,7 @@
 			packageProductDependencies = (
 				FA56804F29FAF47200416F0F /* Apollo */,
 				FA2231A929FB821A00CB44FB /* CountriesAPI */,
+				FA2231D329FC63D700CB44FB /* CountriesAPITestMocks */,
 			);
 			productName = FoapTest;
 			productReference = FA17B7EB29FA3C23000543BF /* FoapTest.app */;
@@ -339,12 +408,18 @@
 				FA17B7EF29FA3C23000543BF /* AppDelegate.swift in Sources */,
 				FA17B80A29FA5BC4000543BF /* String+Utils.swift in Sources */,
 				FA17B7F129FA3C23000543BF /* SceneDelegate.swift in Sources */,
+				FA2231D629FC6AC900CB44FB /* CountryDetailsProviderMock.swift in Sources */,
 				FA2231BE29FC0C2100CB44FB /* UIApplication+KeyWindow.m in Sources */,
 				FA2231B229FBECE000CB44FB /* CountriesRefreshController.swift in Sources */,
+				FA2231C729FC161E00CB44FB /* CountryDetailsProvider.swift in Sources */,
 				FA17B80329FA3DF2000543BF /* CountriesViewController.swift in Sources */,
+				FA2231C129FC13E400CB44FB /* CountryDetailsViewController.swift in Sources */,
+				FA2231CA29FC1A2900CB44FB /* BackendClient.swift in Sources */,
 				FA17B80629FA4094000543BF /* CountryCellContent.swift in Sources */,
+				FA2231C429FC144F00CB44FB /* CountryDetailsConfig.swift in Sources */,
 				FA17B81929FA90CF000543BF /* CountryBasicInfo.swift in Sources */,
 				FA17B82B29FABC49000543BF /* PreviewUtils.swift in Sources */,
+				FA2231CE29FC421300CB44FB /* CountryDetailsView.swift in Sources */,
 				FA17B80D29FA6785000543BF /* CountryListProvider.swift in Sources */,
 				FA17B81B29FA91E1000543BF /* CountriesViewController+DataSource.swift in Sources */,
 				FA17B81329FA7EEB000543BF /* CountryListProviderMock.swift in Sources */,
@@ -655,6 +730,10 @@
 			productName = CountriesAPI;
 		};
 		FA2231AF29FB88B500CB44FB /* CountriesAPITestMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CountriesAPITestMocks;
+		};
+		FA2231D329FC63D700CB44FB /* CountriesAPITestMocks */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CountriesAPITestMocks;
 		};
